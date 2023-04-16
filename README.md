@@ -17,7 +17,7 @@ Tout d'abord, nous devons découper les fichiers en entrée, qui sont dans le r�
 Dans cette fonction, nous ouvrons tous les les fichiers du répertoire `collection_tokens` et nous stockons tous les mots lus dans un dictionnaire avec leur nombre d'occurrence. Autrement dit, si un mot existe déjà dans ce dictionnaire, nous incrémentons sa valeur, sinon nous l'ajoutons au dictionnaire.
 Cette fonction nous facilite d'effectuer le traitement de ces données par la suite. En effet, nous affichons dans un ordre décroissant les termes de ce dictionnaire selon leurs fréquences d'apparition.
 
-Enfin, nous calculons et affichons la taille de notre dictionnaire `My` et la valeur `λ` théorique calculée (`λ = M / math.log(My)`) avec `M = Nombre total d’occurrences des mots ` et `My = Nombre total des mots`
+Enfin, nous calculons et affichons la taille de notre dictionnaire $My$ et la valeur $λ$ théorique calculée (`λ = M / math.log(My)`) avec `M = Nombre total d’occurrences des mots ` et `My = Nombre total des mots`
 
 #### EXEMPLES ET IMAGES
 
