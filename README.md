@@ -32,6 +32,7 @@ Pour cela, nous devons récuperer l'anti-dictionnaire, le vocabulaire, les index
 Ensuite, nous récupérons la requête souhaitée à partir du terminale. Une fois cela est effectué, nous traitons cette requête. C'est-à-dire que nous procédons à sa tokenization, et nous éliminons tous les mots qui sont présents dans l'anti-dictionnaire, tout en calculant le nombre d'occurence de ces mots dans la requête ($tf$).
 
 Par la suite, nous calculons le $tf*idf$ de chaque mot de notre requête, qui seront stockés dans un dictionnaire représantant le vecteur de cette dernière. De plus, nous calculons la norme de cette requête et nous vérifions qu'elle est non nulle. Si ce n'est pas le cas, cela veut dire qu'il n'y a aucun document qui peut répondre à celle-ci.
+
 Sinon, nous calculons le produit scalaire entre la requête et chaque document avec l'index inversé et nous divisions ces résultats par le produit de la norme de la requête et celle de chaque document pour avoir le score de la requête par chaque document. Les résultats finaux seront stockés dans un dictionnaire pour nous permettre de trier par ordre décroissant de pertinence.  
 
 Enfin, nous affichons les $n$ (un entier que l'utilisateur choisit) documents les plus pertinents correspondant à la requête et nous redemandons une nouvelle requête.
