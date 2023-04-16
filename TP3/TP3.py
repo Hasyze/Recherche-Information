@@ -6,7 +6,7 @@ from math import *
 
 import sys
 sys.path.insert(0, '/home/aziz/RI/TP2')
-from TP2 import *
+from TP2 import Antidico
 
 inpfilename = "/home/aziz/RI/TP2/"
 filesdirectory = "/home/aziz/RI/TP1/collection_tokens/"
