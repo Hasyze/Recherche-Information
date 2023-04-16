@@ -38,4 +38,4 @@ Sinon, nous calculons le produit scalaire entre la requête et chaque document a
 Enfin, nous affichons les $n$ (un entier que l'utilisateur choisit) documents les plus pertinents correspondant à la requête et nous redemandons une nouvelle requête.
 
 
-### IMAGES ET EXEMPLES
+#### IMAGES ET EXEMPLES
