@@ -41,7 +41,7 @@ def DicoFichier ():
             racine = stemmer.stem(line) # On génére la racine du terme
             if not line :
                 break
-            if (not racine in antidico): # On ne met pas les mots qui sont dans l'anti-dictionnaire
+            if (not (racine in antidico) and not(line in antidico)): # On ne met pas les mots qui sont dans l'anti-dictionnaire
                 if(not (racine in voc)):
                     voc[racine] = 0 # On met tous les termes qui existent dans le vocabulaire
                 if (racine in dic):

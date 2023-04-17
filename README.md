@@ -11,11 +11,11 @@ L'objectif de ce TP est de mettre en pratique la loi de Zipf en manipulant une c
 
 Tout d'abord, nous devons découper les fichiers en entrée, qui sont dans le répertoire `collection/`. Pour cela, nous avons utilisé `tokenize_cacm3`. Cette fonction prend en argument un nom d'un fichier `filename`. Elle recupère les mots de ce fichier et ne garde que les mots qui commencent par une lettre et qui ne contiennnent ensuite que des lettres ou des chiffres, grâce à un tokenizer `tokenizer = RegexpTokenizer('[A-Za-z]\w{1,}')`. Puis, nous écrivons ces mots (le résultat précédent) en minuscules, chaque ligne ne contient qu'un seul mot, dans un autre fichier possèdant le même nom que celui du départ avec une extention `.tok` d'un autre répertoire `collection_tokens/`.
 
-__CACM1 (avant tokenization):__
-![](https://cdn.discordapp.com/attachments/689438068566261848/1097488462141198397/Capture_decran_du_2023-04-14_01-37-02.png)
+__CACM133 (avant tokenization):__
+![](https://cdn.discordapp.com/attachments/689438068566261848/1097570187382882375/image.png)
 
-__CACM1.tok (après tokenization):__
-![](https://cdn.discordapp.com/attachments/689438068566261848/1097488461507854447/Capture_decran_du_2023-04-13_18-16-22.png)
+__CACM133.tok (après tokenization):__
+![](https://cdn.discordapp.com/attachments/689438068566261848/1097570574991118346/image.png)
 
 
 - ### Calcul de la fréquence d’apparition 
@@ -78,4 +78,4 @@ Sinon, nous calculons le produit scalaire entre la requête et chaque document a
 Enfin, nous affichons les $n$ (un entier que l'utilisateur choisit) documents les plus pertinents correspondant à la requête et nous redemandons une nouvelle requête.
 
 __Résultats de la requête "place":__
-![](https://cdn.discordapp.com/attachments/689438068566261848/1097566251301220463/image.png)
+![](https://cdn.discordapp.com/attachments/689438068566261848/1097577323559137320/image.png)
