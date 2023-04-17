@@ -2,7 +2,7 @@ from operator import itemgetter
 from math import *
 import os
 
-inpfilename = "/home/aziz/RI/TP1/collection_tokens/"
+inpfilename = "/home/aziz/Recherche-Information/TP1/collection_tokens/"
 
 # Question 3 
 
@@ -52,43 +52,3 @@ for elem in rev_dico: #On affiche les 10 mots les plus fréquents avec leurs fr�
 print("La taille du dictionnaire (My) est " + str(len(dico)))
 
 print("La valeur de Lambda théorique calculée est "+str(M/log(len(dico))))
-
-
-  
-
-# dicoFichier = {} #preparation prochain TP
-# My = 0
-# M = 0
-# for i in range (1,3205):
-#     file = open(inpfilename+str(i)+".tok","r")
-#     dicoMot = {} #preparation prochain TP
-#     while True:
-#         line = file.readline().rstrip('\n')
-#         if not line :
-#             break
-        
-#         if (line in dicoMot):  #preparation prochain TP
-#             dicoMot[line]+=1   #preparation prochain TP
-#         else:                  #preparation prochain TP
-#             dicoMot[line] = 1  #preparation prochain TP
-
-#         if (line in dico):
-#             dico[line]+=1
-#         else:
-#             dico[line] = 1
-#             My +=1
-#         M += 1
-#     dicoFichier[inpfilename+str(i)+".tok"] = dicoMot
-#     file.close()
-
-# top = 1
-# for elem in reversed(sorted(dico.items(), key = itemgetter(1))):
-#     print (elem)
-#     if (top == 10):
-#         break
-#     top +=1
-# print("\n")
-# print("M := "+str(M))
-# print ("My := "+str(My))
-# l = M/(log(My))
-# print ("Lambda := "+str(l))

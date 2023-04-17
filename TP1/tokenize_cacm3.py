@@ -1,8 +1,8 @@
 import os
 from nltk.tokenize import RegexpTokenizer
 
-inpfilename = "/home/aziz/RI/TP1/collection/"
-outpathname = "/home/aziz/RI/TP1/collection_tokens/"
+inpfilename = "/home/aziz/Recherche-Information/TP1/collection/"
+outpathname = "/home/aziz/Recherche-Information/TP1/collection_tokens/"
 
 def Tokenize(filename):
     file = open(inpfilename+filename,'r')

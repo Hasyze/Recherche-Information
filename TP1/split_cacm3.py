@@ -1,8 +1,8 @@
 
 
 
-inpfilename = "/home/aziz/RI/TP1/cacm.all"
-outpathname = "/home/aziz/RI/TP1/collection/"
+inpfilename = "/home/aziz/Recherche-Information/TP1/cacm.all"
+outpathname = "/home/aziz/Recherche-Information/TP1/collection/"
 
 def ExtractionDesFichiers(infile,outpath):
     fileHandler = open (infile, "r")

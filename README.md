@@ -78,4 +78,4 @@ Sinon, nous calculons le produit scalaire entre la requête et chaque document a
 Enfin, nous affichons les $n$ (un entier que l'utilisateur choisit) documents les plus pertinents correspondant à la requête et nous redemandons une nouvelle requête.
 
 __Résultats de la requête "place":__
-![](https://cdn.discordapp.com/attachments/689438068566261848/1097488462434807848/Capture_decran_du_2023-04-15_17-56-44.png)
+![](https://cdn.discordapp.com/attachments/689438068566261848/1097566251301220463/image.png)
