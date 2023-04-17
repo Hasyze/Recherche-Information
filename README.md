@@ -59,7 +59,7 @@ Maintenant, nous devons contruire l'index inversé de chaque terme du vocabulair
 Puis, nous allons derterminer la norme du vecteur de chaque document. Pour cela, nous appliquons cette formule: $norme = √(w_i)²$ qui correspond à la racine carrée de la somme des carrées du poids de chaque terme dans le document.
 
 
- - ### Stockage dans le fichier .json :
+ - ### Stockage dans les fichiers .json :
 
 Enfin, nous assurons de stocker tous les dictionnaires associés à le vocabulaire, le vecteur, l'index inversé et la norme de notre collection de documents dans des fichiers `.json` (respectivement dans `vocabulaire.json`, `vecteur.json`, `indexInverse.json` et `norme.json`)
 
