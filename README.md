@@ -11,7 +11,7 @@ L'objectif de ce TP est de mettre en pratique la loi de Zipf en manipulant une c
 
 Tout d'abord, nous devons découper les fichiers en entrée, qui sont dans le répertoire `collection/`. Pour cela, nous avons utilisé `tokenize_cacm3`. Cette fonction prend en argument un nom d'un fichier `filename`. Elle recupère les mots de ce fichier et ne garde que les mots qui commencent par une lettre et qui ne contiennnent ensuite que des lettres ou des chiffres, grâce à un tokenizer `tokenizer = RegexpTokenizer('[A-Za-z]\w{1,}')`. Puis, nous écrivons ces mots (le résultat précédent) en minuscules, chaque ligne ne contient qu'un seul mot, dans un autre fichier possèdant le même nom que celui du départ avec une extention `.tok` d'un autre répertoire `collection_tokens/`.
 
-__CACM1 (avant tokenization)__
+__CACM1 (avant tokenization):__
 ![](https://cdn.discordapp.com/attachments/689438068566261848/1097488462141198397/Capture_decran_du_2023-04-14_01-37-02.png)
 
 __CACM1.tok (après tokenization):__
@@ -24,7 +24,7 @@ Cette fonction nous facilite d'effectuer le traitement de ces données par la su
 
 Enfin, nous calculons et affichons la taille de notre dictionnaire $M_y$ et la valeur $λ$ théorique calculée (`λ = M / math.log(My)`) avec `M = Nombre total d’occurrences des mots ` et `My = Nombre total des mots`
 
-__Résultats des calculs des termes les plus fréquents, de la taille My et de la valeur λ__
+__Résultats des calculs des termes les plus fréquents, de la taille My et de la valeur λ:__
 ![](https://cdn.discordapp.com/attachments/689438068566261848/1097488461822439545/Capture_decran_du_2023-04-14_01-36-30.png)
 
 
@@ -77,5 +77,5 @@ Sinon, nous calculons le produit scalaire entre la requête et chaque document a
 
 Enfin, nous affichons les $n$ (un entier que l'utilisateur choisit) documents les plus pertinents correspondant à la requête et nous redemandons une nouvelle requête.
 
-__Résultats de la requête "place"__
+__Résultats de la requête "place":__
 ![](https://cdn.discordapp.com/attachments/689438068566261848/1097488462434807848/Capture_decran_du_2023-04-15_17-56-44.png)
