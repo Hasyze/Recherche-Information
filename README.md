@@ -1,4 +1,4 @@
-# Recherche-Information
+# Compte Rendu - Recherche d'Information
 **MAÏDA Léa
 KHELIFI Aziz
 CATTEAU Pierrick**
