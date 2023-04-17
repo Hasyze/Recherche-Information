@@ -11,7 +11,12 @@ L'objectif de ce TP est de mettre en pratique la loi de Zipf en manipulant une c
 
 Tout d'abord, nous devons découper les fichiers en entrée, qui sont dans le répertoire `collection/`. Pour cela, nous avons utilisé `tokenize_cacm3`. Cette fonction prend en argument un nom d'un fichier `filename`. Elle recupère les mots de ce fichier et ne garde que les mots qui commencent par une lettre et qui ne contiennnent ensuite que des lettres ou des chiffres, grâce à un tokenizer `tokenizer = RegexpTokenizer('[A-Za-z]\w{1,}')`. Puis, nous écrivons ces mots (le résultat précédent) en minuscules, chaque ligne ne contient qu'un seul mot, dans un autre fichier possèdant le même nom que celui du départ avec une extention `.tok` d'un autre répertoire `collection_tokens/`.
 
-#### EXEMPLES ET IMAGES
+__CACM1 (avant tokenization)__
+![](https://cdn.discordapp.com/attachments/689438068566261848/1097488462141198397/Capture_decran_du_2023-04-14_01-37-02.png)
+
+__CACM1.tok (après tokenization):__
+![](https://cdn.discordapp.com/attachments/689438068566261848/1097488461507854447/Capture_decran_du_2023-04-13_18-16-22.png)
+
 
 - ### Calcul de la fréquence d’apparition 
 Dans cette fonction, nous ouvrons tous les les fichiers du répertoire `collection_tokens` et nous stockons tous les mots lus dans un dictionnaire avec leur nombre d'occurrence. Autrement dit, si un mot existe déjà dans ce dictionnaire, nous incrémentons sa valeur, sinon nous l'ajoutons au dictionnaire.
@@ -19,7 +24,9 @@ Cette fonction nous facilite d'effectuer le traitement de ces données par la su
 
 Enfin, nous calculons et affichons la taille de notre dictionnaire $M_y$ et la valeur $λ$ théorique calculée (`λ = M / math.log(My)`) avec `M = Nombre total d’occurrences des mots ` et `My = Nombre total des mots`
 
-#### EXEMPLES ET IMAGES
+__Résultats des calculs des termes les plus fréquents, de la taille My et de la valeur λ__
+![](https://cdn.discordapp.com/attachments/689438068566261848/1097488461822439545/Capture_decran_du_2023-04-14_01-36-30.png)
+
 
 ## Constitution de vocabulaire et representation
 Le but de ce TP est de construire l'index inversé, le vocabulaire associé à notre corpus et les autres données relatives à l'indexation l'ensemble de documents CACM.
@@ -38,18 +45,24 @@ Vu que nous avons stockés le vocabulaire de chaque document dans un dictionnair
 - ### Représentation vectorielle des fichiers : 
 Ensuite, nous avons construit la représentation vectorielle de tous les fichiers du corpus. Pour cela, nous avons décidé de les présenter sous la forme du produit $tf$ et $idf$ ,c'est-à-dire sous la forme du poids d'un mot dans le corpus, vu que précédemment nous avons calculé les $idf$ de tous les documents (stockés dans `voc`) , ainsi que les $tf$, correspondant à la fréquence d'apparition des mots dans chaque document (stockés dans `dicoFichier`).
 
-Nous stockons ce vecteur dans le dictionnaire ` vecteur` en associant à chaque document, le dictionnaire des poids de chacun de ces mots (grâce à cette formule: $w = tf \times idf$).
+Nous stockons ce vecteur dans le dictionnaire `vecteur` en associant à chaque document, le dictionnaire des poids de chacun de ces mots (grâce à cette formule: $w = tf \times idf$).
 
 - ### Construction de l'index inversé :
 
-- ### Calcul de la norme des vecteurs :  
+Maintenant, nous devons contruire l'index inversé de chaque terme du vocabulaire. En d'autres termes, nous devons créer un dictionnaire où chaque mot du vocabulaire est associé à la liste des documents qui le contiennent.
 
-- ### Stockage dans le fichier .json :
+ Pour cela on parcours l'ensemble des mots du vocabulaire et l'ensemble des fichiers du vecteur afin de construire cet index inversé. On stocke ensuite ce dictionnaire dans le fichier `indexInverse.json`
+
+
+- ### Calcul de la norme des vecteurs :
+
+Puis, nous allons derterminer la norme du vecteur de chaque document. Pour cela, nous appliquons cette formule: $norme = √(w_i)²$ qui correspond à la racine carrée de la somme des carrées du poids de chaque terme dans le document.
+
+
+ - ### Stockage dans le fichier .json :
 
 Enfin, nous assurons de stocker tous les dictionnaires associés à le vocabulaire, le vecteur, l'index inversé et la norme de notre collection de documents dans des fichiers `.json` (respectivement dans `vocabulaire.json`, `vecteur.json`, `indexInverse.json` et `norme.json`)
 
-
-#### EXEMPLES ET IMAGES
 
 ## Recherche et évaluation
 
@@ -64,5 +77,5 @@ Sinon, nous calculons le produit scalaire entre la requête et chaque document a
 
 Enfin, nous affichons les $n$ (un entier que l'utilisateur choisit) documents les plus pertinents correspondant à la requête et nous redemandons une nouvelle requête.
 
-
-#### IMAGES ET EXEMPLES
+__Résultats de la requête "place"__
+![](https://cdn.discordapp.com/attachments/689438068566261848/1097488462434807848/Capture_decran_du_2023-04-15_17-56-44.png)
